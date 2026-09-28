@@ -1,5 +1,8 @@
 # dsa4262-assignment-1-
-This is the NextFlow workflow design for DSA4262 Assignment 1 AY 26/27 Sem 1.  
+This is the NextFlow workflow design for DSA4262 Assignment 1 AY 26/27 Sem 1. 
+
+I adapted the existing SG-NEx workshop Nextflow pipeline by Jonathan Göke rather than developing the workflow entirely from scratch. I extended it to process all four samples, select minimap2 settings by sequencing protocol, sort and index the BAM files, add a samtools QC process, and support annotated and unannotated Bambu runs with Nextflow caching. I also added the R runner and compatibility script included in the repository.
+
 # Long-read RNA-seq workflow
 
 This Nextflow workflow processes four SG-NEx human cancer cell line samples. It aligns direct RNA and cDNA reads to GRCh38 with minimap2, sorts and indexes the BAM files with samtools, records alignment QC, and uses Bambu for transcript discovery and quantification.
